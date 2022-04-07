@@ -41,6 +41,12 @@ public class Main {
                             + nicanave.brake() + ", 0)");
                     System.out.println("\t-->Que quiere hacer con su nave?");
                     break;
+                case "parar":
+                case "Parar":
+                    System.out.println(nicanave + "\n Las coordenadas de la nave serian ("
+                            + nicanave.emergencyStop() + ", 0)");
+                    System.out.println("\t-->Que quiere hacer con su nave?");
+                    break;
                 case "Salir":
                 case "salir":
                     System.out.println("Abandonando la nave...");

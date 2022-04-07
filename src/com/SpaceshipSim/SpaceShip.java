@@ -31,7 +31,11 @@ public class SpaceShip {
         return CoordenadaX;
     }
 
-
+    public int emergencyStop() {
+        VelocidadX = 0;
+        CoordenadaX = CoordenadaX + VelocidadX;
+        return CoordenadaX;
+    }
 
     public String toString() {
         return "                     `. ___\n" +

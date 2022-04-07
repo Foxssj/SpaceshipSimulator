@@ -3,23 +3,35 @@ package com.SpaceshipSim;
 public class SpaceShip {
     private String Nombre;
     private String MatrículaGaláctica;
-    private float Aceleración;
-    private float VelocidadX;
-    private float VelocidadY;
+    private int Aceleracion;
+    private int VelocidadX = 0;
+    private int VelocidadY;
     private int CoordenadaX;
     private int CoordenadaY;
-    private float DirecciónX;
-    private float DirecciónY;
+    private int DirecciónX;
+    private int DirecciónY;
 
     public SpaceShip(String nombre, String matrículaGaláctica,
-                     float aceleracion, int coordenadaX,
-                     float direcciónX) {
+                     int aceleracion, int coordenadaX) {
         Nombre = nombre;
         MatrículaGaláctica = matrículaGaláctica;
-        Aceleración = aceleracion;
+        Aceleracion = aceleracion;
         CoordenadaX = coordenadaX;
-        DirecciónX = direcciónX;
     }
+
+    public int speedUp() {
+        VelocidadX = VelocidadX + Aceleracion;
+        CoordenadaX = CoordenadaX + VelocidadX;
+        return CoordenadaX;
+    }
+
+    public int brake() {
+        VelocidadX = VelocidadX - Aceleracion;
+        CoordenadaX = CoordenadaX + VelocidadX;
+        return CoordenadaX;
+    }
+
+
 
     public String toString() {
         return "                     `. ___\n" +

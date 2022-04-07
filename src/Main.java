@@ -14,19 +14,38 @@ public class Main {
         String matricGalactica = sc.nextLine();
 
         System.out.println("Cual es la potencia de aceleración de tu nave?");
-        float aceleracion = sc.nextFloat();
+        int aceleracion = sc.nextInt();
 
         System.out.println("En que coordenada se encuentra? (X)");
         int coordenadaX = sc.nextInt();
-
-        System.out.println("En que dirección va tu nave? (X)");
-        int direccionX = sc.nextInt();
         sc.nextLine();
 
-        SpaceShip nicanave = new SpaceShip(nombreNave, matricGalactica, aceleracion, coordenadaX, direccionX);
+        SpaceShip nicanave = new SpaceShip(nombreNave, matricGalactica, aceleracion, coordenadaX);
 
-        System.out.println(nicanave);
+        System.out.println(nicanave + "\n" + "Que quiere hacer con su nave?");
+
+
+        boolean salir = false;
+        while (salir != true) {
+            String eleccion = sc.nextLine();
+            switch (eleccion) {
+                case "Acelerar":
+                case "acelerar":
+                    System.out.println(nicanave + "\n Las coordenadas de la nave serian ("
+                            + nicanave.speedUp() + ", 0)");
+                    System.out.println("\t--> Que quiere hacer con su nave?");
+                    break;
+                case "frenar":
+                case "Frenar":
+                    System.out.println(nicanave + "\n Las coordenadas de la nave serian ("
+                            + nicanave.brake() + ", 0)");
+                    System.out.println("\t-->Que quiere hacer con su nave?");
+                    break;
+                case "Salir":
+                case "salir":
+                    System.out.println("Abandonando la nave...");
+                    salir = true;
+            }
+        }
     }
-
-
 }

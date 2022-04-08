@@ -1,40 +1,40 @@
 package com.SpaceshipSim;
 
 public class SpaceShip {
-    private String Nombre;
-    private String MatrículaGaláctica;
-    private int Aceleracion;
-    private int VelocidadX = 0;
-    private int VelocidadY;
-    private int CoordenadaX;
-    private int CoordenadaY;
-    private int DirecciónX;
-    private int DirecciónY;
+    private String nombre;
+    private String matrículaGaláctica;
+    private int aceleracion;
+    private int velocidadX = 0;
+    private int velocidadY;
+    private int coordenadaX;
+    private int coordenadaY;
+    private int direcciónX;
+    private int direcciónY;
 
     public SpaceShip(String nombre, String matrículaGaláctica,
                      int aceleracion, int coordenadaX) {
-        Nombre = nombre;
-        MatrículaGaláctica = matrículaGaláctica;
-        Aceleracion = aceleracion;
-        CoordenadaX = coordenadaX;
+        this.nombre = nombre;
+        this.matrículaGaláctica = matrículaGaláctica;
+        this.aceleracion = aceleracion;
+        this.coordenadaX = coordenadaX;
     }
 
     public int speedUp() {
-        VelocidadX = VelocidadX + Aceleracion;
-        CoordenadaX = CoordenadaX + VelocidadX;
-        return CoordenadaX;
+        velocidadX = velocidadX + aceleracion;
+        coordenadaX = coordenadaX + velocidadX;
+        return coordenadaX;
     }
 
     public int brake() {
-        VelocidadX = VelocidadX - Aceleracion;
-        CoordenadaX = CoordenadaX + VelocidadX;
-        return CoordenadaX;
+        velocidadX = velocidadX - aceleracion;
+        coordenadaX = coordenadaX + velocidadX;
+        return coordenadaX;
     }
 
     public int emergencyStop() {
-        VelocidadX = 0;
-        CoordenadaX = CoordenadaX + VelocidadX;
-        return CoordenadaX;
+        velocidadX = 0;
+        coordenadaX = coordenadaX + velocidadX;
+        return coordenadaX;
     }
 
     public String toString() {
@@ -42,8 +42,8 @@ public class SpaceShip {
                 "                    __,' __`.                _..----....____\n" +
                 "        __...--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'\n" +
                 "  _..-''-------'   `'   `'   `'     O ``-''._   (,;') _,'\n" +
-                ",'________________                          \\`-._`-','    " + Nombre + "\n" +
-                " `._              ```````````------...___   '-.._'-:      " + MatrículaGaláctica + "\n" +
+                ",'________________                          \\`-._`-','    " + nombre + "\n" +
+                " `._              ```````````------...___   '-.._'-:      " + matrículaGaláctica + "\n" +
                 "    ```--.._      ,.                     ````--...__\\-.\n" +
                 "            `.--. `-`                       ____    |  |`\n" +
                 "              `. `.                       ,'`````.  ;  ;`\n" +

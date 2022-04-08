@@ -48,6 +48,8 @@ import java.util.Scanner;
                                 + nicanave.emergencyStop() + ", 0)");
                         System.out.println("\t-->Que quiere hacer con su nave?");
                         break;
+                    default:
+                        System.out.println("ERROR 105: Comando no desbloqueado o no existente.");
                     case "Salir":
                     case "salir":
                         System.out.println("Abandonando la nave...");

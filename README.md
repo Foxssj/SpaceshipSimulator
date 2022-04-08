@@ -6,3 +6,7 @@ será capaz de:
 1. Ser una nave espacial
 2. Moverse por un espacio
 3. acelerar y frenar
+
+
+###- Info de nuestro SpaceShip:
+-[Spaceship](./docs/SpaceShip.md)

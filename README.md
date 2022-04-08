@@ -9,4 +9,8 @@ será capaz de:
 
 
 ###- Info de nuestro SpaceShip:
--[Spaceship](./docs/SpaceShip.md)
+-[Spaceship.](./docs/SpaceShip.md)
+
+
+###- Info de nuestra Cargo SpaceShip:
+-[Cargo.](./docs/Cargo.md)
